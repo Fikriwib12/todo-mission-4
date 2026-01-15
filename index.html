@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>To Do Mission Basic 4</title>
+  </head>
+  <body class="bg-slate-100">
+    <div class="container w-[900px] mx-auto mt-10 bg-white p-5">
+      <header class="flex justify-between border-b-2 pb-3">
+        <div>
+          <h2 class="name text-2xl font-bold">Fikri Wibowo</h2>
+          <h4>Web Developer</h4>
+        </div>
+        <div>
+          <h2 class="clock text-2xl font-bold">09.29.00</h2>
+          <p>Kamis, 15 Januari 2026</p>
+        </div>
+      </header>
+
+      <form
+        action=""
+        class="input-group flex flex-col bg-slate-200 p-5 mt-5 gap-3"
+      >
+        <label for="taskInput">New Task</label>
+        <textarea
+          name=""
+          id="taskInput"
+          placeholder="Contoh : Menyelesaikan Laporan"
+          class="p-5 border-solid border-slate-400 border-1 rounded-md"
+        ></textarea>
+
+        <div class="controls">
+          <label for="prioritySelect">Prioritas:</label>
+          <select
+            id="prioritySelect"
+            class="border-solid border-slate-400 border-1 rounded-md"
+          >
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+          <button class="btn-submit p-3 bg-green-300 rounded-md ml-2">
+            + Submit Tugas
+          </button>
+        </div>
+      </form>
+
+      <div class="flex justify-between mt-5">
+        <div class="todo-col w-[40%]">
+          <h2 class="text-2xl font-bold border-b-2 border-blue-100 pb-2 mb-3">
+            To Do List
+          </h2>
+          <div id="todolist">
+            <div
+              class="task-item bg-white shadow-md flex items-start p-4 border-l-4 border-black rounded-md relative"
+            >
+              <input type="checkbox" name="" id="" class="w-6" />
+              <div class="task-content ml-4 flex flex-col gap-2">
+                <span class="task-text">Lorem ipsum dolor, sit amet</span>
+                <div class="task-meta">Prioritas : <strong>Low</strong></div>
+              </div>
+              <button
+                class="ml-12 border-red-500 bg-red-500 text-white font-bold text-xl border-[2px]"
+                id="btn-delete-task"
+              >
+                x
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="done-col w-[40%]">
+          <h2 class="text-2xl font-bold border-b-2 border-blue-100 pb-3 mb-3">
+            Done
+          </h2>
+          <div id="done">
+            <div
+              class="task-done bg-slate-300 shadow-md flex items-start p-4 border-l-4 border-black rounded-md relative"
+            >
+              <input type="checkbox" name="" id="" class="w-6" />
+              <div class="task-content ml-4 flex flex-col gap-2">
+                <span class="task-text line-through"
+                  >Lorem ipsum dolor, sit amet</span
+                >
+                <div class="task-meta">Prioritas : <strong>Low</strong></div>
+              </div>
+              <button
+                class="ml-12 border-red-500 bg-red-500 text-white font-bold text-xl border-[2px]"
+                id="btn-delete-done"
+              >
+                x
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
