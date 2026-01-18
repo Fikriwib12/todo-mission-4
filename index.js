@@ -174,5 +174,9 @@ function deleteAllDone(key) {
   displayDone();
 }
 
+document.querySelector(".btn-submit").addEventListener("click", (event) => {
+  event.preventDefault();
+});
+
 displayTask();
 displayDone();
